@@ -2,10 +2,17 @@
 import { Logo } from "@/components/logo";
 import { useTheme } from "@/components/theme-provider";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import IntegrationsSection from "@/components/integrations-4";
+import StatsSection from "@/components/stats-4";
+import Pricing from "@/components/pricing";
+import PricingComparator from "@/components/pricing-comparator";
+import TestimonialsSection from "@/components/testimonials";
+import FooterSection from "@/components/footer";
 
 const menuItems = [
   { name: "Features", href: "#" },
@@ -84,6 +91,9 @@ export default function HeroSection() {
                       <span>Commencer</span>
                     </Link>
                   </Button>
+                  <div className="flex items-center pl-5">
+                    <ThemeToggle />
+                  </div>
                 </div>
               </div>
             </div>
@@ -105,16 +115,15 @@ export default function HeroSection() {
           <div className="relative mx-auto max-w-5xl px-6 pt-28 lg:pt-24">
             <div className="relative z-10 mx-auto max-w-2xl text-center">
               <h1 className="text-balance text-4xl font-semibold md:text-5xl lg:text-6xl">
-                Modern testing reimagined
+                Automatiser l’achat-revente. <br /> Maximiser vos profits.
               </h1>
               <p className="text-muted-foreground mx-auto my-8 max-w-2xl text-xl">
-                Officiis laudantium excepturi ducimus rerum dignissimos, and
-                tempora nam vitae, excepturi ducimus iste provident dolores.
+                Moins d’achats. Plus d’efficacité. Notre bot intelligent détecte, achète et revend pour vous — plus vite que n’importe qui.
               </p>
 
               <Button asChild size="lg">
                 <Link href="#">
-                  <span className="btn-label">Start Building</span>
+                  <span className="btn-label">Commencer maintenant</span>
                 </Link>
               </Button>
             </div>
@@ -136,7 +145,13 @@ export default function HeroSection() {
             </div>
           </div>
         </section>
-        <section className="dark:bg-background bg-muted/50 relative z-10 py-16">
+        <IntegrationsSection />
+        <StatsSection />
+        <Pricing />
+        <PricingComparator />
+        <TestimonialsSection />
+
+        {/* <section className="dark:bg-background bg-muted/50 relative z-10 py-16">
           <div className="m-auto max-w-5xl px-6">
             <h2 className="text-center text-lg font-medium">
               Your favorite companies are our partners.
@@ -221,7 +236,8 @@ export default function HeroSection() {
               />
             </div>
           </div>
-        </section>
+        </section> */}
+        <FooterSection />
       </main>
     </>
   );
