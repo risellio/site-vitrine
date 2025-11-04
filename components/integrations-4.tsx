@@ -22,9 +22,9 @@ export default function IntegrationsSection() {
                             </IntegrationCard>
                         </div>
                         <div className="mx-auto my-2 flex w-fit justify-center gap-2">
-                            <div className="bg-muted relative z-20 rounded-3xl border p-1.5">
+                            <div className="bg-muted relative z-20 rounded-3xl border p-2">
                                 <IntegrationCard
-                                    className="shadow-black-950/10 dark:bg-background size-20 border-black/25 shadow-xl dark:border-white/25 dark:shadow-white/10"
+                                    className="shadow-black-950/10 dark:bg-background size-24 border-black/25 shadow-xl dark:border-white/25 dark:shadow-white/10"
                                     isCenter={true}>
                                     <LogoIcon />
                                 </IntegrationCard>
@@ -66,7 +66,7 @@ export default function IntegrationsSection() {
 const IntegrationCard = ({ children, className, position, isCenter = false }: { children: React.ReactNode; className?: string; position?: 'left-top' | 'left-middle' | 'left-bottom' | 'right-top' | 'right-middle' | 'right-bottom'; isCenter?: boolean }) => {
     return (
         <div className={cn('bg-background relative flex size-16 rounded-xl border dark:bg-transparent', className)}>
-            <div className={cn('relative z-20 m-auto size-fit *:size-8', isCenter && '*:size-11')}>{children}</div>
+            <div className={cn('relative z-20 m-auto size-fit *:size-8', isCenter && '*:size-14')}>{children}</div>
             {position && !isCenter && (
                 <div
                     className={cn(
