@@ -1,24 +1,24 @@
 "use client";
+import FooterSection from "@/components/footer";
+import IntegrationsSection from "@/components/integrations-4";
 import { Logo } from "@/components/logo";
+import Pricing from "@/components/pricing";
+import PricingComparator from "@/components/pricing-comparator";
+import StatsSection from "@/components/stats-4";
+import TestimonialsSection from "@/components/testimonials";
 import { useTheme } from "@/components/theme-provider";
-import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import IntegrationsSection from "@/components/integrations-4";
-import StatsSection from "@/components/stats-4";
-import Pricing from "@/components/pricing";
-import PricingComparator from "@/components/pricing-comparator";
-import TestimonialsSection from "@/components/testimonials";
-import FooterSection from "@/components/footer";
 
 const menuItems = [
-  { name: "Features", href: "#" },
+  { name: "Fonctionnalités", href: "#" },
   { name: "Solution", href: "#" },
-  { name: "Pricing", href: "#" },
-  { name: "About", href: "#" },
+  { name: "Tarifs", href: "#" },
+  { name: "À propos", href: "#" },
 ];
 
 export default function HeroSection() {
@@ -118,7 +118,9 @@ export default function HeroSection() {
                 Automatiser l’achat-revente. <br /> Maximiser vos profits.
               </h1>
               <p className="text-muted-foreground mx-auto my-8 max-w-2xl text-xl">
-                Moins d’achats. Plus d’efficacité. Notre bot intelligent détecte, achète et revend pour vous — plus vite que n’importe qui.
+                Moins d’achats. Plus d’efficacité. Notre bot intelligent
+                détecte, achète et revend pour vous — plus vite que n’importe
+                qui.
               </p>
 
               <Button asChild size="lg">

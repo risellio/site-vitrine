@@ -5,10 +5,7 @@
       "Bash(bunx:*)",
       "Bash(vercel --yes:*)",
       "Bash(vercel login)",
-      "Bash(npm install)",
-      "Bash(git stash:*)",
-      "Bash(rm:*)",
-      "Bash(vercel --prod:*)"
+      "Bash(npm install)"
     ],
     "deny": [],
     "ask": []
